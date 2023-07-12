@@ -1,0 +1,329 @@
+ ****** HSPICE -- H-2013.03-SP2 64-BIT (Aug 26 2013) win64 ******               
+  Copyright (C) 2013 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: sum_abcin.sp                                                      
+  Command line options: -i sum_abcin.sp -o sum_abcin.lis
+  lic:  
+  lic: FLEXlm: v10.9.8 
+  lic: USER:   iman                 HOSTNAME: DESKTOP-QCMARDT 
+  lic: HOSTID: "8c89a5095ae6 00ffb396c3c5 0cd292461edc 0cd292461edd 0ed292461edd
+  0ed292461edc" PID:  
+  lic: Using FLEXlm license file: 
+  lic: C:\hspice_lic\synopsys.dat 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12 
+  lic: NODE LOCKED license on hostid "8c89a5095ae6 00ffb396c3c5 0cd292461edc 0cd
+ 292461edd 0ed292461ed
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_H-2013.03-SP2\meta.cfg
+  **info** (sum_abcin.sp:58) DC voltage reset to initial transient source value              in source        0:va                  new dc=  0.0000D+00
+ 
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+1****** HSPICE -- H-2013.03-SP2 64-BIT (Aug 26 2013) win64 ******               
+ ******  
+ sum_abcin
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:a       =   0.      0:b       =   0.      0:cin     =   0.     
+ +0:cout    =  11.1881n 0:coutbar =   1.8000  0:j1      =  44.5284m
+ +0:j2      =  44.5284m 0:j3      =   1.8000  0:j4      =   1.8000 
+ +0:j5      =   1.4520  0:j6      =  34.8273n 0:j7      =   1.8000 
+ +0:j8      =   1.8000  0:sum     =  11.1881n 0:sumbar  =   1.8000 
+ +0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:va       0:vb       0:vcin     0:vdd     
+  volts      0.         0.         0.         1.8000 
+  current    0.         0.         0.       -77.8959p
+  power      0.         0.         0.       140.2126p
+
+     total voltage source power dissipation=  140.2126p       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:m_1      0:m_2      0:m_3      0:m_4      0:m_5      0:m_6     
+ model    0:nmos.12  0:nmos.12  0:nmos.12  0:nmos.12  0:nmos.12  0:pmos.6  
+ region       Cutoff     Cutoff     Cutoff     Cutoff     Cutoff     Linear
+  id         4.3823p    4.3823p -7.489e-20    2.8050p    2.8050p   -6.3632p
+  ibs     -1.510e-26 -1.510e-26  -23.3439a  -23.3439a  -23.3439a  1.494e-21
+  ibd      -23.3439a  -23.3439a  -23.3439a   -2.4903f   -2.4903f  2.986e-21
+  vgs        0.         0.       -44.5284m  -44.5284m  -44.5284m   -1.8000 
+  vds       44.5284m   44.5284m   -2.2378n    1.7555     1.7555   -12.3838n
+  vbs        0.         0.       -44.5284m  -44.5284m  -44.5284m   12.3838n
+  vth      517.2704m  517.2704m  530.0048m  524.3183m  524.3183m -513.5288m
+  vdsat     43.9560m   43.9560m   44.0511m   44.0497m   44.0497m -720.5395m
+  vod     -517.2704m -517.2704m -574.5332m -568.8467m -568.8467m   -1.2865 
+  beta       1.4220m    1.4220m    1.4210m    1.4214m    1.4214m  515.9711u
+  gam eff  968.2416m  968.2416m  973.5108m  973.5108m  973.5108m  648.0477m
+  gm       126.7501p  126.7501p    2.1777a   81.5573p   81.5573p    2.8631p
+  gds       38.7570p   38.7570p   33.4664p    1.1477p    1.1477p  514.4081u
+  gmb       40.7133p   40.7133p  6.876e-19   24.1583p   24.1583p    1.8388p
+  cdtot    716.4488a  716.4488a  716.4488a  543.4012a  543.4012a    3.6348f
+  cgtot    520.8064a  520.8064a  520.8064a  520.8064a  520.8064a    2.5891f
+  cstot    727.3887a  727.3887a  716.4488a  716.4488a  716.4488a    3.7534f
+  cbtot      1.3489f    1.3489f    1.3380f    1.1649f    1.1649f    3.9690f
+  cgs      153.9300a  153.9300a  153.9300a  153.9300a  153.9300a    1.2747f
+  cgd      153.9300a  153.9300a  153.9300a  153.9300a  153.9300a    1.2747f
+
+
+
+ subckt                                                                    
+ element  0:m_7      0:m_8      0:m_9      0:m_10     0:m_11     0:m_12    
+ model    0:pmos.6   0:pmos.6   0:pmos.6   0:pmos.6   0:nmos.12  0:nmos.12 
+ region       Linear     Linear     Linear     Linear     Cutoff     Linear
+  id        -6.3632p    1.2564a   -6.3632p   -6.3632p   13.2623p   31.8037p
+  ibs      1.494e-21  1.494e-21  8.372e-25  8.372e-25 -5.019e-26 -1.085e-25
+  ibd      2.986e-21  1.494e-21  1.493e-21  1.493e-21   -2.2559f -3.833e-23
+  vgs       -1.8000    -1.8000    -1.8000    -1.8000     0.         1.8000 
+  vds      -12.3838n    2.2204f  -12.3838n  -12.3838n    1.4520    34.8273n
+  vbs       12.3838n   12.3838n    0.         0.         0.         0.     
+  vth     -513.5288m -513.5288m -513.5288m -513.5288m  513.3526m  517.3944m
+  vdsat   -720.5395m -720.5395m -720.5395m -720.5395m   43.9553m  479.3774m
+  vod       -1.2865    -1.2865    -1.2865    -1.2865  -513.3526m    1.2826 
+  beta     515.9711u  515.9711u  515.9711u  515.9711u    1.4222m    1.1780m
+  gam eff  648.0477m  648.0477m  648.0477m  648.0477m  968.2416m  968.2416m
+  gm         2.8631p  5.653e-19    2.8631p    2.8631p  383.5352p   10.8289p
+  gds      514.4081u  514.4081u  514.4081u  514.4081u    5.6811p  918.3662u
+  gmb        1.8388p  3.631e-19    1.8388p    1.8388p  117.4525p    5.9529p
+  cdtot      3.6348f    3.7534f    3.6348f    3.6348f  561.1225a    1.2364f
+  cgtot      2.5891f    2.5891f    2.5891f    2.5891f  520.8064a  881.3509a
+  cstot      3.7534f    3.6348f    3.7534f    3.7534f  727.3887a    1.2805f
+  cbtot      3.9690f    3.9690f    3.9690f    3.9690f    1.1936f    1.3925f
+  cgs        1.2747f    1.2747f    1.2747f    1.2747f  153.9300a  427.6416a
+  cgd        1.2747f    1.2747f    1.2747f    1.2747f  153.9300a  427.6416a
+
+
+
+ subckt                                                                    
+ element  0:m_13     0:m_14     0:m_15     0:m_16     0:m_17     0:m_18    
+ model    0:nmos.12  0:nmos.12  0:nmos.12  0:pmos.6   0:pmos.6   0:pmos.6  
+ region       Cutoff     Cutoff     Cutoff     Cutoff     Linear     Linear
+  id        13.2622p   33.4411p   15.2895p   -7.0949a  -54.4956p   54.4956p
+  ibs     -3.849e-23  -28.3549a -3.850e-23  1.279e-20  2.559e-20  2.558e-20
+  ibd       -2.2559f  -28.3549a  -16.3804f  3.837e-20  3.837e-20  1.280e-20
+  vgs      -34.8273n  348.0299m  -34.8273n   81.2898n   -1.8000    -1.8000 
+  vds        1.4520   348.0296m    1.8000  -212.1147n -106.0574n  106.0573n
+  vbs      -34.8273n   -1.4520   -34.8273n  106.0573n  212.1146n  212.1146n
+  vth      513.3527m  791.2068m  512.3839m -513.5288m -513.5289m -513.5288m
+  vdsat     43.9553m   46.2027m   43.9551m  -40.6506m -720.5394m -720.5394m
+  vod     -513.3527m -443.1770m -512.3839m  513.5289m   -1.2865    -1.2865 
+  beta       1.4222m    1.3571m    1.4223m  648.8652u  515.9711u  515.9711u
+  gam eff  968.2416m    1.1008   968.2416m  648.0477m  648.0477m  648.0477m
+  gm       383.5347p    1.0301n  442.1458p  214.5210a   24.5201p   24.5200p
+  gds        5.6811p   42.2200p    5.9886p   33.4485p  514.4080u  514.4080u
+  gmb      117.4523p  142.1345p  133.7896p   83.3087a   15.7479p   15.7479p
+  cdtot    561.1225a  543.4012a  543.4012a    2.0929f    3.6348f    3.7534f
+  cgtot    520.8064a  452.8409a  520.8064a    1.4168f    2.5891f    2.5891f
+  cstot    727.3887a  561.1225a  727.3887a    2.0929f    3.7534f    3.6348f
+  cbtot      1.1936f  941.6446a    1.1759f    3.9102f    3.9690f    3.9690f
+  cgs      153.9300a  153.9300a  153.9300a  423.1200a    1.2747f    1.2747f
+  cgd      153.9300a  153.9300a  153.9300a  423.1200a    1.2747f    1.2747f
+
+
+
+ subckt                                                                    
+ element  0:m_19     0:m_20     0:m_21     0:m_22     0:m_23     0:m_24    
+ model    0:pmos.6   0:pmos.6   0:nmos.12  0:pmos.12  0:nmos.12  0:pmos.12 
+ region       Linear     Cutoff     Linear     Cutoff     Linear     Cutoff
+  id       -54.4956p   -7.0950a    5.3364p   -1.7348p    5.3364p   -1.7348p
+  ibs      7.170e-24    0.      -2.642e-26  6.812e-25 -2.642e-26  6.812e-25
+  ibd      1.278e-20  2.558e-20 -8.934e-24    1.5655f -8.934e-24    1.5655f
+  vgs       -1.8000   -24.7675n    1.8000  -318.1721n    1.8000   -24.7675n
+  vds     -106.0573n -212.1146n   11.1881n   -1.8000    11.1881n   -1.8000 
+  vbs        0.         0.         0.         0.         0.         0.     
+  vth     -513.5288m -513.5288m  525.2922m -481.7299m  525.2922m -481.7299m
+  vdsat   -720.5395m  -40.6506m  481.2420m  -41.4875m  481.2421m  -41.4875m
+  vod       -1.2865   513.5288m    1.2747   481.7295m    1.2747   481.7298m
+  beta     515.9711u  648.8652u  658.2523u  207.8750u  658.2523u  207.8750u
+  gam eff  648.0477m  648.0477m    1.0565   694.8753m    1.0565   694.8753m
+  gm        24.5200p  214.5218a    1.7172p   52.4143p    1.7172p   52.4139p
+  gds      514.4081u   33.4487p  479.7981u  661.0965f  479.7981u  661.0907f
+  gmb       15.7479p   83.3090a  936.1309f   18.8919p  936.1280f   18.8917p
+  cdtot      3.6348f    2.0929f  684.6135a  580.2071a  684.6135a  580.2071a
+  cgtot      2.5891f    1.4168f  433.3455a  477.6986a  433.3455a  477.6987a
+  cstot      3.7534f    2.0929f  706.4812a  819.9240a  706.4812a  819.9240a
+  cbtot      3.9690f    3.9102f  868.9110a    1.3399f  868.9110a    1.3399f
+  cgs        1.2747f  423.1200a  203.6388a  134.4800a  203.6388a  134.4800a
+  cgd        1.2747f  423.1200a  203.6388a  134.4800a  203.6388a  134.4800a
+
+
+
+ ******  
+ sum_abcin
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+ a_sum_tp_1= 129.2381p  targ=  15.1242n   trig=  14.9950n
+ a_sum_tp_2= 139.0839p  targ=  35.1341n   trig=  34.9950n
+ a_sum_tp_3=  63.3683p  targ=  50.0584n   trig=  49.9950n
+ a_sum_tp_4=  49.5891p  targ=  55.0446n   trig=  54.9950n
+ a_sum_tp_5=  79.7165p  targ=  57.5747n   trig=  57.4950n
+ a_sum_tp_6= 260.1780p  targ=  60.2552n   trig=  59.9950n
+ a_sum_tp_7= 249.8407p  targ=  62.7448n   trig=  62.4950n
+ a_sum_tp_8= 135.5692p  targ=  80.1306n   trig=  79.9950n
+ a_sum_tp_9= 139.2127p  targ= 100.1342n   trig=  99.9950n
+ a_sum_tp_10= 289.8405p  targ= 105.2848n   trig= 104.9950n
+ a_sum_tp_11= 213.7833p  targ= 112.7088n   trig= 112.4950n
+ a_sum_tp_12= 101.1395p  targ= 117.5961n   trig= 117.4950n
+ a_sum_tp_13= 239.0383p  targ= 127.7340n   trig= 127.4950n
+ a_sum_tp_14= 228.8538p  targ= 140.2239n   trig= 139.9950n
+ a_sum_tp_15= 258.1543p  targ= 145.2532n   trig= 144.9950n
+ a_sum_tp_16= 210.3200p  targ= 147.7053n   trig= 147.4950n
+ a_sum_tp_17= 248.6401p  targ= 150.2436n   trig= 149.9950n
+ b_sum_tp_1=  69.1893p  targ=   7.5642n   trig=   7.4950n
+ b_sum_tp_2=  92.1450p  targ=  12.5871n   trig=  12.4950n
+ b_sum_tp_3= 207.6281p  targ=  20.2026n   trig=  19.9950n
+ b_sum_tp_4= 277.1894p  targ=  32.7722n   trig=  32.4950n
+ b_sum_tp_5=  46.1955p  targ=  37.5412n   trig=  37.4950n
+ b_sum_tp_6=  63.3683p  targ=  50.0584n   trig=  49.9950n
+ b_sum_tp_7=  49.5891p  targ=  55.0446n   trig=  54.9950n
+ b_sum_tp_8=  79.7165p  targ=  57.5747n   trig=  57.4950n
+ b_sum_tp_9= 249.8407p  targ=  62.7448n   trig=  62.4950n
+ b_sum_tp_10= 274.9326p  targ=  77.7699n   trig=  77.4950n
+ b_sum_tp_11=  92.1450p  targ=  12.5871n   trig=  12.4950n
+ b_sum_tp_12= 213.7833p  targ= 112.7088n   trig= 112.4950n
+ b_sum_tp_13= 239.0383p  targ= 127.7340n   trig= 127.4950n
+ b_sum_tp_14= 228.8538p  targ= 140.2239n   trig= 139.9950n
+ b_sum_tp_15= 210.3200p  targ= 147.7053n   trig= 147.4950n
+ b_sum_tp_16= 248.6401p  targ= 150.2436n   trig= 149.9950n
+ cin_sum_tp_1= 157.3661p  targ=   5.1524n   trig=   4.9950n
+ cin_sum_tp_2= 142.2319p  targ=  25.1372n   trig=  24.9950n
+ cin_sum_tp_3= 110.7215p  targ=  30.1057n   trig=  29.9950n
+ cin_sum_tp_4=  46.1955p  targ=  37.5412n   trig=  37.4950n
+ cin_sum_tp_5= 230.8075p  targ=  42.7258n   trig=  42.4950n
+ cin_sum_tp_6= 199.6303p  targ=  45.1946n   trig=  44.9950n
+ cin_sum_tp_7=  49.5891p  targ=  55.0446n   trig=  54.9950n
+ cin_sum_tp_8= 249.8407p  targ=  62.7448n   trig=  62.4950n
+ cin_sum_tp_9=  61.3509p  targ=  87.5564n   trig=  87.4950n
+ cin_sum_tp_10= 220.9304p  targ=  90.2159n   trig=  89.9950n
+ cin_sum_tp_11= 277.7486p  targ=  95.2727n   trig=  94.9950n
+ cin_sum_tp_12= 213.7833p  targ= 112.7088n   trig= 112.4950n
+ cin_sum_tp_13= 101.1395p  targ= 117.5961n   trig= 117.4950n
+ cin_sum_tp_14= 239.0383p  targ= 127.7340n   trig= 127.4950n
+ cin_sum_tp_15= 228.8538p  targ= 140.2239n   trig= 139.9950n
+ cin_sum_tp_16= 248.6401p  targ= 150.2436n   trig= 149.9950n
+ a_cout_tp_1= 130.9318p  targ=  50.1259n   trig=  49.9950n
+ a_cout_tp_2=  79.1206p  targ=  52.5741n   trig=  52.4950n
+ a_cout_tp_3=  66.9519p  targ=  55.0620n   trig=  54.9950n
+ a_cout_tp_4= 104.6036p  targ=  57.5996n   trig=  57.4950n
+ a_cout_tp_5= 185.8993p  targ=  60.1809n   trig=  59.9950n
+ a_cout_tp_6= 172.8669p  targ=  62.6679n   trig=  62.4950n
+ a_cout_tp_7= 199.7716p  targ= 105.1948n   trig= 104.9950n
+ a_cout_tp_8=  66.6213p  targ= 107.5616n   trig= 107.4950n
+ a_cout_tp_9= 140.1590p  targ= 110.1352n   trig= 109.9950n
+ a_cout_tp_10= 170.0386p  targ= 112.6650n   trig= 112.4950n
+ a_cout_tp_11=  77.9802p  targ= 115.0730n   trig= 114.9950n
+ a_cout_tp_12= 180.3003p  targ= 117.6753n   trig= 117.4950n
+ a_cout_tp_13=  69.0946p  targ= 127.5641n   trig= 127.4950n
+ a_cout_tp_14=  94.5682p  targ= 140.0896n   trig= 139.9950n
+ a_cout_tp_15= 120.2241p  targ= 145.1152n   trig= 144.9950n
+ a_cout_tp_16= 124.8429p  targ= 147.6198n   trig= 147.4950n
+ a_cout_tp_17= 114.5872p  targ= 150.1096n   trig= 149.9950n
+ a_cout_tp_18=  66.3628p  targ= 152.5614n   trig= 152.4950n
+ a_cout_tp_19= 139.6783p  targ= 155.1347n   trig= 154.9950n
+ b_cout_tp_1= 123.0325p  targ=  20.1180n   trig=  19.9950n
+ b_cout_tp_2=  95.7563p  targ=  32.5908n   trig=  32.4950n
+ b_cout_tp_3=  94.4225p  targ=  37.5894n   trig=  37.4950n
+ b_cout_tp_4=  66.2646p  targ=  47.5613n   trig=  47.4950n
+ b_cout_tp_5= 130.9318p  targ=  50.1259n   trig=  49.9950n
+ b_cout_tp_6=  79.1206p  targ=  52.5741n   trig=  52.4950n
+ b_cout_tp_7= 104.6036p  targ=  57.5996n   trig=  57.4950n
+ b_cout_tp_8= 104.6036p  targ=  57.5996n   trig=  57.4950n
+ b_cout_tp_9= 172.8669p  targ=  62.6679n   trig=  62.4950n
+ b_cout_tp_10= 109.5738p  targ=  77.6046n   trig=  77.4950n
+ b_cout_tp_11=  69.1755p  targ=  87.5642n   trig=  87.4950n
+ b_cout_tp_12=  65.4780p  targ=  97.5605n   trig=  97.4950n
+ b_cout_tp_13= 170.0386p  targ= 112.6650n   trig= 112.4950n
+ b_cout_tp_14=  69.0946p  targ= 127.5641n   trig= 127.4950n
+ b_cout_tp_15=  94.5682p  targ= 140.0896n   trig= 139.9950n
+ b_cout_tp_16= 124.8429p  targ= 147.6198n   trig= 147.4950n
+ b_cout_tp_17= 114.5872p  targ= 150.1096n   trig= 149.9950n
+ b_cout_tp_18=  66.3628p  targ= 152.5614n   trig= 152.4950n
+ cin_cout_tp_1=  94.4225p  targ=  37.5894n   trig=  37.4950n
+ cin_cout_tp_2= 149.5971p  targ=  42.6446n   trig=  42.4950n
+ cin_cout_tp_3= 105.0469p  targ=  45.1000n   trig=  44.9950n
+ cin_cout_tp_4=  66.2646p  targ=  47.5613n   trig=  47.4950n
+ cin_cout_tp_5=  66.9519p  targ=  55.0620n   trig=  54.9950n
+ cin_cout_tp_6= 172.8669p  targ=  62.6679n   trig=  62.4950n
+ cin_cout_tp_7=  69.1755p  targ=  87.5642n   trig=  87.4950n
+ cin_cout_tp_8= 168.4165p  targ=  90.1634n   trig=  89.9950n
+ cin_cout_tp_9= 102.8480p  targ=  95.0978n   trig=  94.9950n
+ cin_cout_tp_10=  65.4780p  targ=  97.5605n   trig=  97.4950n
+ cin_cout_tp_11=  66.6213p  targ= 107.5616n   trig= 107.4950n
+ cin_cout_tp_12= 140.1590p  targ= 110.1352n   trig= 109.9950n
+ cin_cout_tp_13= 170.0386p  targ= 112.6650n   trig= 112.4950n
+ cin_cout_tp_14=  77.9802p  targ= 115.0730n   trig= 114.9950n
+ cin_cout_tp_15= 180.3003p  targ= 117.6753n   trig= 117.4950n
+ cin_cout_tp_16=  69.0946p  targ= 127.5641n   trig= 127.4950n
+ cin_cout_tp_17=  94.5682p  targ= 140.0896n   trig= 139.9950n
+ cin_cout_tp_18= 124.8429p  targ= 147.6198n   trig= 147.4950n
+ cin_cout_tp_19= 114.5872p  targ= 150.1096n   trig= 149.9950n
+ cin_cout_tp_20= 139.6783p  targ= 155.1347n   trig= 154.9950n
+
+          ***** job concluded
+1****** HSPICE -- H-2013.03-SP2 64-BIT (Aug 26 2013) win64 ******               
+ ******  
+ sum_abcin
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     4
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      65 # elements   =      28
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      24 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1          21
+  transient          0.32       16001        4653        1567 rev=        77
+  readin             0.06
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         42.10 megabytes
+           total cpu time            0.40 seconds
+           total elapsed time        0.51 seconds
+           job started at     17:54:56 11/25/2017
+           job ended   at     17:54:56 11/25/2017
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.09(s)

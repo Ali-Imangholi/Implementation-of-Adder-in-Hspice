@@ -1,0 +1,230 @@
+ ****** HSPICE -- H-2013.03-SP2 64-BIT (Aug 26 2013) win64 ******               
+  Copyright (C) 2013 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: sum_abcin.sp                                                      
+  Command line options: -i sum_abcin.sp -o sum_abcin.lis
+  lic:  
+  lic: FLEXlm: v10.9.8 
+  lic: USER:   iman                 HOSTNAME: DESKTOP-QCMARDT 
+  lic: HOSTID: "8c89a5095ae6 00ffb396c3c5 0cd292461edc 0cd292461edd 0ed292461edd
+  0ed292461edc" PID:  
+  lic: Using FLEXlm license file: 
+  lic: C:\hspice_lic\synopsys.dat 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12 
+  lic: NODE LOCKED license on hostid "8c89a5095ae6 00ffb396c3c5 0cd292461edc 0cd
+ 292461edd 0ed292461ed
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_H-2013.03-SP2\meta.cfg
+ 
+
+  
+ **warning**  No DC path to ground from node        0:cin              defined in subckt 0               ; Connected by HSPICE with gdcpath
+
+
+
+ **warning** the following singular supplies were terminated to 1 meg resistor 
+   supply       node1            node2
+  vc                      0:c                defined in subckt 0                     0:0                defined in subckt 0               
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+1****** HSPICE -- H-2013.03-SP2 64-BIT (Aug 26 2013) win64 ******               
+ ******  
+ sum_abcin
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:a       =   1.8000  0:b       =   1.8000  0:c       =   1.8000 
+ +0:cin     =   0.      0:cout    =   1.8000  0:coutbar =  38.5317n
+ +0:j1      =   7.7063n 0:j2      =  15.4127n 0:j3      = 489.5819m
+ +0:j4      =   1.2920  0:j5      =   1.4493  0:j6      =   1.4663 
+ +0:j7      =   1.8000  0:j8      =   1.8000  0:sum     =   7.7675n
+ +0:sumbar  =   1.8000  0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:va       0:vb       0:vc       0:vdd     
+  volts      1.8000     1.8000     1.8000     1.8000 
+  current    0.         0.        -1.8000u  -61.4220p
+  power      0.         0.         3.2400u  110.5596p
+
+     total voltage source power dissipation=    3.2401u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:m_1      0:m_2      0:m_3      0:m_4      0:m_5      0:m_6     
+ model    0:nmos.12  0:nmos.12  0:nmos.12  0:nmos.12  0:nmos.12  0:pmos.12 
+ region       Linear     Linear     Linear     Cutoff     Linear     Cutoff
+  id         3.6757p    7.3514p   -3.6757p    3.3120a   11.0270p   -5.6432p
+  ibs     -1.820e-26 -3.640e-26 -1.233e-23 -6.172e-24 -1.240e-23    1.1164f
+  ibd     -6.154e-24 -1.231e-23 -6.190e-24 -3.086e-23 -3.081e-23    1.1164f
+  vgs        1.8000     1.8000     1.8000    -7.7063n    1.8000  -489.5819m
+  vds        7.7063n   15.4127n   -7.7063n   30.8253n   23.1190n -489.5819m
+  vbs        0.         0.       -15.4127n   -7.7063n  -15.4127n    1.3104 
+  vth      525.2922m  525.2922m  525.2922m  525.2922m  525.2922m -841.6886m
+  vdsat    481.2421m  481.2421m  481.2421m   49.8908m  481.2421m  -43.6938m
+  vod        1.2747     1.2747     1.2747  -525.2922m    1.2747   352.1066m
+  beta     658.2523u  658.2523u  658.2523u  768.1061u  658.2523u   89.7262u
+  gam eff    1.0565     1.0565     1.0565     1.0565     1.0565   972.6934m
+  gm         1.1828p    2.3656p    1.1828p   95.6331a    3.5484p  181.4860p
+  gds      479.7981u  479.7981u  479.7981u  107.4428p  479.7981u    4.4326p
+  gmb      644.8054f    1.2896p  644.8048f   29.4222a    1.9344p   35.6187p
+  cdtot    684.6135a  684.6135a  706.4812a  440.3512a  684.6135a  349.5695a
+  cgtot    433.3455a  433.3455a  433.3455a  264.0355a  433.3455a  219.4641a
+  cstot    706.4812a  706.4812a  684.6135a  440.3512a  706.4812a  372.6219a
+  cbtot    868.9110a  868.9110a  868.9110a  851.5380a  868.9110a  692.3755a
+  cgs      203.6388a  203.6388a  203.6388a   73.3000a  203.6388a   62.3200a
+  cgd      203.6388a  203.6388a  203.6388a   73.3000a  203.6388a   62.3200a
+
+
+
+ subckt                                                                    
+ element  0:m_7      0:m_8      0:m_9      0:m_10     0:m_11     0:m_12    
+ model    0:pmos.12  0:pmos.12  0:pmos.12  0:pmos.12  0:nmos.12  0:nmos.12 
+ region       Cutoff     Cutoff     Cutoff     Cutoff     Cutoff     Cutoff
+  id      -6.816e-23 -5.235e-23  -85.4242f  -58.9410f    8.8000p    8.8640p
+  ibs        1.1164f    1.1164f  3.970e-25  1.613e-25 -5.075e-26 -5.115e-26
+  ibd        1.1164f    1.1164f    1.1164f    1.1164f   -1.4175f   -1.5935f
+  vgs      508.0185m  508.0185m    0.         0.         0.        38.5317n
+  vds       -1.2920  -802.3995m   -1.3104  -508.0185m    1.4493     1.4663 
+  vbs      508.0185m  508.0185m    0.         0.         0.         0.     
+  vth     -662.9147m -666.6100m -518.7226m -522.3333m  521.2579m  521.2106m
+  vdsat    -42.3153m  -42.3153m  -40.4750m  -40.4747m   49.8925m   49.8925m
+  vod        1.1709     1.1746   518.7226m  522.3333m -521.2579m -521.2106m
+  beta      98.0783u   98.0855u  102.0165u  102.0406u  767.8962u  767.8936u
+  gam eff  930.8003m  930.8003m  897.5260m  897.5260m    1.0565     1.0565 
+  gm       2.141e-21  1.644e-21    2.5859p    1.7843p  254.0618p  255.9078p
+  gds      3.504e-23  2.979e-23   35.4213f   31.5215f    3.7583p    3.7662p
+  gmb      6.510e-22  5.049e-22  952.0977f  665.8563f   74.7177p   75.2151p
+  cdtot    349.5695a  372.6219a  372.6219a  431.7081a  341.6063a  341.0307a
+  cgtot    250.8709a  250.8709a  250.8709a  250.8709a  264.0355a  264.0355a
+  cstot    431.7081a  431.7081a  501.6720a  501.6720a  440.3512a  440.3512a
+  cbtot    782.8684a  805.9208a  875.8847a  934.9709a  752.7931a  752.2174a
+  cgs       62.3200a   62.3200a   62.3200a   62.3200a   73.3000a   73.3000a
+  cgd       62.3200a   62.3200a   62.3200a   62.3200a   73.3000a   73.3000a
+
+
+
+ subckt                                                                    
+ element  0:m_13     0:m_14     0:m_15     0:m_16     0:m_17     0:m_18    
+ model    0:nmos.12  0:nmos.12  0:nmos.12  0:pmos.12  0:pmos.12  0:pmos.12 
+ region       Cutoff     Cutoff     Cutoff     Linear     Cutoff     Cutoff
+  id       -14.2310p    0.        28.6451p  -32.9296p   -1.0760a -5.380e-19
+  ibs      -20.5774a  -20.5774a  -20.5774a  1.425e-20 -9.224e-27 -9.215e-27
+  ibd      -20.5774a  -20.5774a  -20.5774a  2.847e-20  2.848e-20  1.424e-20
+  vgs      333.7058m   -1.4493   333.7058m   -1.8000  -212.2746f -212.2746f
+  vds      -16.9963m  350.7014m  333.7051m -327.7022n -655.4049n -327.7028n
+  vbs       -1.4663    -1.4493    -1.4663   327.7025n -212.2746f -212.2746f
+  vth      777.9103m  772.0327m  774.1950m -524.6195m -524.6194m -524.6194m
+  vdsat     48.5666m   48.5582m   48.5594m -628.7612m  -40.4746m  -40.4746m
+  vod     -444.2045m   -2.2213  -440.4892m   -1.2754   524.6194m  524.6194m
+  beta     745.2263u  746.1181u  745.6702u  112.1164u  102.0560u  102.0560u
+  gam eff    1.2249     1.2249     1.2265   897.5260m  897.5260m  897.5260m
+  gm       435.9443p    0.       879.4718p   21.4715p   32.5750a   16.2876a
+  gds      660.6303p    0.        37.8269p  100.6187u    1.6418p    1.6418p
+  gmb       52.5973p    0.       102.7624p    9.9449p   12.3596a    6.1798a
+  cdtot    341.6063a  330.8024a  330.8024a  735.5718a  501.6719a  501.6719a
+  cgtot    231.2581a  264.0355a  231.2581a  415.1094a  250.8709a  250.8709a
+  cstot    341.0307a  341.6063a  341.0307a  756.0945a  501.6720a  501.6720a
+  cbtot    620.6951a  643.2443a  609.8912a    1.0204f    1.0049f    1.0049f
+  cgs       73.3000a   73.3000a   73.3000a  187.7500a   62.3200a   62.3200a
+  cgd       73.3000a   73.3000a   73.3000a  187.7500a   62.3200a   62.3200a
+
+
+
+ subckt                                                                    
+ element  0:m_19     0:m_20     0:m_21     0:m_22     0:m_23     0:m_24    
+ model    0:pmos.12  0:pmos.12  0:nmos.12  0:pmos.12  0:nmos.12  0:pmos.12 
+ region       Linear     Linear     Linear     Cutoff     Cutoff     Linear
+  id       -32.9296p   21.3141a    3.7049p -103.7549f   10.1500p  -13.7607p
+  ibs      9.366e-24    0.      -1.834e-26  5.415e-25 -5.917e-26  3.914e-24
+  ibd      1.423e-20 -9.215e-27 -6.203e-24    1.1196f  -10.6015f  5.947e-21
+  vgs       -1.8000    -1.8000     1.8000  -655.4047n   38.5317n   -1.8000 
+  vds     -327.7025n  212.2746f    7.7675n   -1.8000     1.8000  -136.9405n
+  vbs        0.         0.         0.         0.         0.         0.     
+  vth     -524.6194m -524.6194m  525.2922m -516.5194m  520.2817m -524.6194m
+  vdsat   -628.7613m -628.7613m  481.2419m  -40.4751m   49.8929m -628.7613m
+  vod       -1.2754    -1.2754     1.2747   516.5188m -520.2817m   -1.2754 
+  beta     112.1164u  112.1164u  658.2524u  102.0020u  767.8434u  112.1164u
+  gam eff  897.5260m  897.5260m    1.0565   897.5260m    1.0565   897.5260m
+  gm        21.4715p   13.8977a    1.1922p    3.1408p  293.0271p    8.9725p
+  gds      100.6187u  100.6187u  479.7980u   39.7322f    3.9544p  100.6187u
+  gmb        9.9449p    6.4370a  649.9265f    1.1467p   85.1006p    4.1558p
+  cdtot    735.5718a  756.0945a  684.6135a  349.5695a  330.8024a  735.5719a
+  cgtot    415.1094a  415.1094a  433.3455a  250.8708a  264.0355a  415.1094a
+  cstot    756.0945a  735.5719a  706.4812a  501.6720a  440.3512a  756.0945a
+  cbtot      1.0204f    1.0204f  868.9110a  852.8323a  741.9892a    1.0204f
+  cgs      187.7500a  187.7500a  203.6388a   62.3200a   73.3000a  187.7500a
+  cgd      187.7500a  187.7500a  203.6388a   62.3200a   73.3000a  187.7500a
+
+
+
+ ******  
+ sum_abcin
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+ pow=   3.2401u  from=   1.0000n     to= 170.0000n
+
+          ***** job concluded
+1****** HSPICE -- H-2013.03-SP2 64-BIT (Aug 26 2013) win64 ******               
+ ******  
+ sum_abcin
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     4
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      66 # elements   =      29
+  # resistors   =       1 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      24 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1          30
+  transient          0.01       20001          56          28 rev=         0
+  readin             0.03
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         41.74 megabytes
+           total cpu time            0.05 seconds
+           total elapsed time        0.10 seconds
+           job started at     17:42:40 11/25/2017
+           job ended   at     17:42:40 11/25/2017
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.04(s)

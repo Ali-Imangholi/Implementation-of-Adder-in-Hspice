@@ -1,0 +1,30 @@
+* "simulator" "HSPICE" 
+* "version" "H-2013.03-SP2 64-BIT"
+* "format" "HSP"
+* "rundate" "17:42:40 11/25/2017 "
+* "netlist" "sum_abcin.sp "
+* "runtitle" "sum_abcin"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   1.8000        
++ b =   1.8000        
++ c =   1.8000        
++ cin =   0.            
++ cout =   1.8000        
++ coutbar =  38.5317n       
++ j1 =   7.7063n       
++ j2 =  15.4127n       
++ j3 = 489.5819m       
++ j4 =   1.2920        
++ j5 =   1.4493        
++ j6 =   1.4663        
++ j7 =   1.8000        
++ j8 =   1.8000        
++ sum =   7.7675n       
++ sumbar =   1.8000        
++ vdd =   1.8000        
+***   END: Saved Operating Point ***                     

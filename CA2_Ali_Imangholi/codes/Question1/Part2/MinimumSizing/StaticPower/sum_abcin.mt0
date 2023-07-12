@@ -1,0 +1,4 @@
+$DATA1 SOURCE='HSPICE' VERSION='H-2013.03-SP2 64-BIT'
+.TITLE 'sum_abcin'
+ pow              temper           alter#            
+  1.291e-09        100.0000        1                 

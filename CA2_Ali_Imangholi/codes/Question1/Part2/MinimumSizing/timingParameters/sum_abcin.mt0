@@ -1,0 +1,54 @@
+$DATA1 SOURCE='HSPICE' VERSION='H-2013.03-SP2 64-BIT'
+.TITLE 'sum_abcin'
+ a_sum_tp_1       a_sum_tp_2       a_sum_tp_3       a_sum_tp_4        
+ a_sum_tp_5       a_sum_tp_6       a_sum_tp_7       a_sum_tp_8        
+ a_sum_tp_9       a_sum_tp_10      a_sum_tp_11      a_sum_tp_12       
+ a_sum_tp_13      a_sum_tp_14      a_sum_tp_15      a_sum_tp_16       
+ b_sum_tp_1       b_sum_tp_2       b_sum_tp_3       b_sum_tp_4        
+ b_sum_tp_5       b_sum_tp_6       b_sum_tp_7       b_sum_tp_8        
+ b_sum_tp_9       b_sum_tp_10      b_sum_tp_11      b_sum_tp_12       
+ b_sum_tp_13      b_sum_tp_14      cin_sum_tp_1     cin_sum_tp_2      
+ cin_sum_tp_3     cin_sum_tp_4     cin_sum_tp_5     cin_sum_tp_6      
+ cin_sum_tp_7     cin_sum_tp_8     cin_sum_tp_9     cin_sum_tp_10     
+ cin_sum_tp_11    cin_sum_tp_12    cin_sum_tp_13    cin_sum_tp_14     
+ cin_sum_tp_15    a_cout_tp_1      a_cout_tp_2      a_cout_tp_3       
+ a_cout_tp_4      a_cout_tp_5      a_cout_tp_6      a_cout_tp_7       
+ a_cout_tp_8      a_cout_tp_9      a_cout_tp_10     a_cout_tp_11      
+ a_cout_tp_12     a_cout_tp_13     a_cout_tp_14     a_cout_tp_15      
+ a_cout_tp_16     a_cout_tp_17     a_cout_tp_18     a_cout_tp_19      
+ b_cout_tp_1      b_cout_tp_2      b_cout_tp_3      b_cout_tp_4       
+ b_cout_tp_5      b_cout_tp_6      b_cout_tp_7      b_cout_tp_8       
+ b_cout_tp_9      b_cout_tp_10     b_cout_tp_11     b_cout_tp_12      
+ b_cout_tp_13     b_cout_tp_14     b_cout_tp_15     b_cout_tp_16      
+ b_cout_tp_17     cin_cout_tp_1    cin_cout_tp_2    cin_cout_tp_3     
+ cin_cout_tp_4    cin_cout_tp_5    cin_cout_tp_6    cin_cout_tp_7     
+ cin_cout_tp_8    cin_cout_tp_9    cin_cout_tp_10   cin_cout_tp_11    
+ cin_cout_tp_12   cin_cout_tp_13   cin_cout_tp_14   cin_cout_tp_15    
+ cin_cout_tp_16   cin_cout_tp_17   cin_cout_tp_18   cin_cout_tp_19    
+ cin_cout_tp_20   temper           alter#            
+  1.115e-10        2.605e-10        6.545e-11        1.250e-10        
+  2.588e-10        2.588e-10        4.027e-10        1.145e-10        
+  2.609e-10        4.623e-10        2.005e-10        2.916e-10        
+  3.162e-10        3.332e-10        2.771e-10        3.267e-10        
+  7.197e-11        1.963e-10        2.733e-10        3.448e-10        
+  6.223e-11        6.545e-11        1.250e-10        4.027e-10        
+  3.873e-10        2.005e-10        2.916e-10        3.162e-10        
+  2.771e-10        3.267e-10        9.634e-11        2.908e-10        
+  1.232e-10        2.219e-10        3.738e-10        2.874e-10        
+  6.545e-11        4.027e-10        2.077e-10        3.315e-10        
+  2.005e-10        2.916e-10        3.162e-10        2.771e-10        
+  3.267e-10        9.230e-11        1.090e-10        5.730e-11        
+  1.890e-10        1.493e-10        2.891e-10        3.461e-10        
+  6.242e-11        2.738e-10        1.351e-10        1.080e-10        
+  1.290e-10        1.080e-10        7.807e-11        1.977e-10        
+  9.436e-11        1.946e-10        6.267e-11        2.717e-10        
+  1.396e-10        7.814e-11        9.369e-11        9.230e-11        
+  1.090e-10        5.730e-11        1.890e-10        2.891e-10        
+  1.058e-10        1.102e-10        5.783e-11        1.351e-10        
+  1.080e-10        7.807e-11        9.436e-11        1.946e-10        
+  6.267e-11        7.814e-11        2.695e-10        9.589e-11        
+  9.369e-11        5.730e-11        2.891e-10        1.102e-10        
+  1.266e-10        1.509e-10        5.783e-11        6.242e-11        
+  2.738e-10        1.351e-10        1.080e-10        1.290e-10        
+  1.008e-08        7.807e-11        9.436e-11        1.946e-10        
+  2.717e-10        100.0000        1                 
